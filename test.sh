@@ -1,0 +1,4 @@
+docker exec -it my-project-kafka-1 kafka-console-producer.sh --bootstrap-server localhost:9092 --topic orders <<EOF
+{"order_uid":"demo-001","track_number":"WBILMTESTTRACK","entry":"WBIL","delivery":{"name":"Demo User","phone":"+79990001122","zip":"123456","city":"Demo City","address":"Demo Street 1","region":"Demo Region","email":"demo@test.com"},"payment":{"transaction":"demo-txn-001","currency":"USD","provider":"wbpay","amount":200,"payment_dt":1637907727,"bank":"alpha","delivery_cost":0,"goods_total":200},"items":[{"chrt_id":2000,"track_number":"WBILMTESTTRACK","price":200,"name":"Demo Item","size":"L","total_price":200,"nm_id":2000,"brand":"Demo Brand"}],"locale":"en","customer_id":"demo-customer","delivery_service":"meest","date_created":"2021-11-26T06:22:19Z"}
+EOF
+echo "Заказ отправлен!"
